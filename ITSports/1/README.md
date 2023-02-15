@@ -18,4 +18,4 @@ Witch is the title in jsonplaceholder API
 
 
 
-![alt](/1/src/screen.png)
+![alt](/ITSports/1/src/screen.png)
