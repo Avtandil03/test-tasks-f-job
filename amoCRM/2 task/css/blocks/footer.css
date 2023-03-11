@@ -1,0 +1,138 @@
+.footer {
+  
+}
+.footer .container {
+
+}
+.footer__inner {
+  padding-top:55px;
+  padding-bottom:20px;
+}
+.footer__top {
+  margin-bottom: 30px;
+}
+.footer__nav {
+  display: flex;
+}
+.footer__nav-item {
+
+}
+.footer__nav-item:last-child {
+  margin-left: auto;
+  text-align: right;
+}
+.footer__nav-item:last-child  {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.footer__nav-item:first-child  {
+  margin-right: 98px;
+}
+.footer__nav-title {
+  margin-bottom: 20px;
+  color: #656566;  
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.footer__nav-link {
+  font-size: 16px;
+  line-height: 19px;
+}
+.footer__nav-nested {
+  display: flex;
+}
+.footer__nested-item:first-child {
+  margin-right: 52px;
+}
+.footer__phone {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.footer__contacts-icons {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+.footer__contacts-icons a{
+  margin-left: 12px;
+}
+.footer__bottom {
+  text-align: right;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  line-height: 20px;
+}
+.footer__bottom-title {
+
+}
+.footer__bottom-subtitle {
+  text-decoration: underline!important;;
+}
+
+@media (max-width: 1022px) {
+  .footer__nav-item:first-child  {
+    margin-right: 30px;
+  }
+  .footer__nested-item:first-child {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 766px) {
+  .footer{
+   background-color: #000;
+  }
+  .footer__inner {
+    padding-top:45px;
+    padding-bottom:58px;
+  }
+  .footer__top {
+    margin-bottom: 20px;
+  }
+  .footer__nav {
+    flex-direction: column;
+  }
+  .footer__nav-item {
+    margin-bottom: 30px;
+  }
+  .footer__nav-item:last-child {
+    margin-left: 0;
+    text-align: left;
+  }
+  .footer__nav-link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .footer__contacts-icons {
+    justify-content: start;
+    margin-bottom: 20px;
+  }
+  .footer__contacts-icons a{
+    margin-right: 12px;
+    margin-left: 0;
+  }
+  .footer__phone {
+    margin-bottom: 8px;
+  }
+  .footer__contacts-icons {
+    margin-bottom: 8px;
+  }
+  .footer__bottom {
+    text-align: left;
+  }
+  .footer__nested-item:first-child {
+    margin-right: 40px;
+  }
+.footer__address {
+  font-size: 14px;
+  line-height: 17px;
+}
+}
+
+
+
+
+
