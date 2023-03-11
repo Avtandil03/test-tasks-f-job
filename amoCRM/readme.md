@@ -14,5 +14,7 @@
 # Demo lives
 
 ### Задание 1
+https://avtandil03.github.io/test-tasks-f-job/amoCRM/1%20task/
 
 ### Задание 2
+https://avtandil03.github.io/test-tasks-f-job/amoCRM/2%20task/
