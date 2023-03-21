@@ -1,0 +1,32 @@
+
+body{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #E4E5EA;
+  background: url('../img/desktop-bg.png');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+}
+
+.container{
+  /* border: 1px solid green; */
+  max-width: 1170px ;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 766px) {
+  body{
+    background:black;
+  }
+  .content{
+    background: url('../img/mobile-bg.png');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+  }
+}
