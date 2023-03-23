@@ -1,13 +1,18 @@
 import BookList from './components/BookList/BookList'
 import Header from './components/Header/Header'
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import BookPage from './components/BookPage/BookPage';
 
 function App() {
 
   return (
-    <div className="App">
+    <BrowserRouter className="App">
       <Header />
-      <BookList />
-    </div>
+      <Routes>
+        <Route path='/' element={<BookList />}/>
+        <Route path='/book/:id' element={<BookPage/>}/>
+      </Routes>      
+    </BrowserRouter>
   )
 }
 

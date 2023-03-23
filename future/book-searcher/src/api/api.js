@@ -28,3 +28,16 @@ export const getBooks = createAsyncThunk('books/getBooks', async (props) => {
     return error.message
   }
 })
+
+export const getBookById = createAsyncThunk('book/getBookById', async (id) => {
+  try {
+    const response = await axios.get(`${apiUrl}/volumes/${id}`, {
+      params: {
+        key: API_KEY,
+      },
+    })
+    return response.data
+  } catch (error) {
+    return error.message    
+  }
+})
