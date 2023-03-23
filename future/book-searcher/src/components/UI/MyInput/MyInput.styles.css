@@ -1,0 +1,28 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 320px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #121212d6;
+  color: #dfd39b;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+@media(max-width: 425px){
+  .input {
+    width: 270px;
+  }
+}
