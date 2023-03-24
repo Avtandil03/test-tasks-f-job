@@ -2,7 +2,7 @@ import BookList from './components/BookList/BookList'
 import Header from './components/Header/Header'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import BookPage from './components/BookPage/BookPage';
-import StartPage from './components/startPage/startPage';
+import StartPage from './components/StartPage/StartPage';
 
 function App() {
 
