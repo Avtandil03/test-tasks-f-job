@@ -27,4 +27,5 @@ https://hub.docker.com/repository/docker/avtann/book-searcher/general
 
 
 ## Screen
-<img  src='./public/demoScreen.png' title="Demo" />
+<img  src='./public/demoScreen.jpg'  />
+<img  src='./public/demoScreen.png'  />
