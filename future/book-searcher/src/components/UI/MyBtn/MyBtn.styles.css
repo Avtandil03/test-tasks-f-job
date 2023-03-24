@@ -1,0 +1,29 @@
+.my-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -50px;
+  margin-top: 20px;
+}
+
+.my-btn {
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #c6a00c;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  color: #ddd;
+
+}
+
+.my-btn:hover {
+  background-color: #b38f00;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.my-btn:active {
+  background-color: #8c6b00;
+  box-shadow: none;
+}

@@ -14,10 +14,11 @@ const searchSlice = createSlice({
     setQuery: (state, action) => {state.query = action.payload},
     setSubject: (state, action) => {state.subject = action.payload},
     setOrderMode: (state, action) => {state.orderBy = action.payload},
-    nextPage: (state) => {state.page += 1}
+    loadMore: (state) => {state.page += 1},
+    resetLoadMore: (state) => {state.page = initialState.page},
   },
 })
 
-export const { setQuery, setSubject, setOrderMode, nextPage } = searchSlice.actions
+export const { setQuery, setSubject, setOrderMode, loadMore, resetLoadMore } = searchSlice.actions
 
 export default searchSlice.reducer

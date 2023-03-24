@@ -1,20 +1,38 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 import MyLoader from '../UI/MyLoader/MyLoader'
 import BookCard from './BookCard/BookCard';
 import './BookList.styles.css'
+import MyBtn from '../UI/MyBtn/MyBtn';
+import { getMoreBooks } from '../../api/api';
+import { loadMore } from '../../features/search/searchSlice';
 
 const BookList = () => {
   const {books, isLoading, error, totalItems } = useSelector((state) => state.books)
+  
+  const dispatch = useDispatch()
+  const searchProps = useSelector((state) => state.search)
+
+  const handleLoadMore = () => {
+
+    if(searchProps.query){
+      dispatch(loadMore())
+      dispatch(getMoreBooks(searchProps))
+    } 
+  }
   return (
-    <div className='book-list'>
-      {isLoading && <MyLoader/> }
+    <div className='bookList'>
+      <span className='totalItems'>Found: {totalItems}</span>     
       { error && <h1 className='errorMessage' >{error}</h1>}
-      { totalItems ? 
-        <div className='grid-container'>{
-          books?.map(book => <BookCard key={book.id} book={book}>{book.id}</BookCard> )}
+      { isLoading ? <MyLoader/> : totalItems ? 
+        <div className='bookList__grid-container'>{
+          books?.map(book => <BookCard key={book.id } book={book}>{book.id}</BookCard> )}
         </div>
-        : <h1>Search something ...</h1>
+        :  <span className='searchSomething'>Search something ...</span>
+      }
+      {   books?.length && books?.length < totalItems
+      ? <MyBtn onClick={handleLoadMore} content={'Load more...'}/>
+      : <div></div>
       }
     </div>
   );

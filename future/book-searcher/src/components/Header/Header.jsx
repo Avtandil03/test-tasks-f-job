@@ -3,18 +3,25 @@ import { selects } from '../../constants/searchOptions';
 import MyInput from '../UI/MyInput/MyInput';
 import MySearchBtn from '../UI/MySearchBtn/MySearchBtn';
 import MySelect from '../UI/MySelect/MySelect';
-import { setQuery, setSubject, setOrderMode, nextPage } from '../../features/search/searchSlice'
+import { setQuery, setSubject, setOrderMode, resetLoadMore } from '../../features/search/searchSlice'
 import { useDispatch, useSelector } from 'react-redux';
 import { getBooks } from '../../api/api';
 
 import './Header.styles.css'
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const dispatch = useDispatch()
   const searchProps = useSelector((state) => state.search)
+  const navigate = useNavigate()
 
   const fetchAllBooks = () => {
-    if(searchProps.query) dispatch(getBooks(searchProps))
+    navigate('/books')
+
+    if(searchProps.query) {
+      dispatch(resetLoadMore())
+      dispatch(getBooks(searchProps))
+    }
   }
   return (
     <header className='header'>

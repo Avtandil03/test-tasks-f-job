@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getBooks } from '../../api/api';
+import { getBooks, getMoreBooks } from '../../api/api';
+
 
 const initialState = {
   books: [],
@@ -7,6 +8,7 @@ const initialState = {
   error: null,
   isLoading: false
 }
+
 
 const booksSlice = createSlice({
   name: 'books',
@@ -24,7 +26,10 @@ const booksSlice = createSlice({
     },
     [getBooks.rejected]: (state, action) => {
       state.isLoading = false
-      state.error = action.error.message;
+      state.error = action.payload;
+    },
+    [getMoreBooks.fulfilled]: (state, action) => {
+      state.books = [...state.books, ...action.payload.items]
     },
   },
 });
