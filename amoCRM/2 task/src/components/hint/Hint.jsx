@@ -3,7 +3,7 @@ import './Hint.styles.css'
 const Hint = ({ close }) => {
 
   return (
-    <div className='closeWrapper' >
+    <div className='closeWrapper' onClick={close} >
       <div className="hint">
         <button className="hint__close-btn" onClick={close}>⨉</button>
         <p className="hint__text">Пожалуйста, откройте режим разработчика, нажав клавишу F12, и включите режим `Toggle device toolbar - Ctrl+Shift+M`. Предлагается там сравнивать масштаб выставив нужные размеры экрана, так как на разных устройствах настройки экрана отличаются.</p>
