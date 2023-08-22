@@ -1,0 +1,57 @@
+.productCard {
+  border: 1px solid #ccc;
+  padding: 32px;
+  width: 320px;
+  height: 670px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.productImage {
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.productPrice {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.productName {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.productDescription {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.chooseColor {
+  color: gray;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  margin-bottom: 25px;
+
+  & p {
+    margin-bottom: 15px;
+  }
+}
+
+.cardButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+.reviews {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  margin-bottom: 18px;
+  color: #007bff;
+}
